@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Ninjas | Secure Your Future</title>
+    <style>
+        :root {
+            --neon-green: #00ff41;
+            --dark-bg: #0a0a0a;
+            --card-bg: #161616;
+        }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: var(--dark-bg);
+            color: #ffffff;
+            margin: 0;
+            scroll-behavior: smooth;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--neon-green);
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+        }
+        nav a:hover { color: var(--neon-green); }
+
+        .section {
+            padding: 100px 20px;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Forms */
+        .form-container {
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 10px;
+            border: 1px solid var(--neon-green);
+            width: 100%;
+            max-width: 400px;
+        }
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            background: #000;
+            border: 1px solid #444;
+            color: var(--neon-green);
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 12px;
+            background: var(--neon-green);
+            color: black;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        /* Dashboard View */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 1000px;
+        }
+        .belt-rank {
+            border: 2px solid white;
+            padding: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#signup">Join Dojo</a>
+    <a href="#dashboard">Dashboard</a>
+</nav>
+
+<section id="home" class="section">
+    <h1 style="color: var(--neon-green); font-size: 3rem;">CYBER NINJAS</h1>
+    <p>The code is your weapon. The network is your battlefield.</p>
+    <a href="#signup" style="color: var(--neon-green);">[ Initialize Training ]</a>
+</section>
+
+<section id="signup" class="section">
+    <div class="form-container">
+        <h2 style="text-align: center;">CREATE OPERATIVE PROFILE</h2>
+        <form onsubmit="event.preventDefault(); alert('Profile Created! Check the Dashboard.');">
+            <label>Codename</label>
+            <input type="text" placeholder="e.g. Ghost_Coder">
+            <label>Email</label>
+            <input type="email" placeholder="ninja@secure.com">
+            <label>Access Key (Password)</label>
+            <input type="password" placeholder="••••••••">
+            <button type="submit">COMMENCE ENROLLMENT</button>
+        </form>
+    </div>
+</section>
+
+<section id="dashboard" class="section">
+    <h2>OPERATIVE DASHBOARD</h2>
+    <div class="belt-rank" style="border-color: #ffffff;">RANK: WHITE BELT (NOVICE)</div>
+    
+    <div class="dashboard-grid">
+        <div class="form-container">
+            <h3>Current Mission</h3>
+            <p><strong>Logic Bombs 101:</strong> Learn the basics of Python loops to automate security scans.</p>
+            <progress value="45" max="100" style="width: 100%;"></progress>
+        </div>
+        <div class="form-container">
+            <h3>Recent Trophies</h3>
+            <p>🏆 First Script Executed</p>
+            <p>🏆 Firewall Breached (Simulated)</p>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
